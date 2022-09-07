@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url('./assets/fonts/Quicksand-VariableFont_wght.ttf')
+}
+
+$main-color: #ffa500;
+
+@mixin font($fontfamily, $fontstyle, $fontweight, $fontsize, $lineheight, $color) {
+  font-family: $fontfamily;
+  font-style: $fontstyle;
+  font-weight: $fontweight;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $color;
+}
+
+@mixin positionning($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: brown;
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+  header {
+    width: calc(100% - 120px);
+    padding: 40px 80px 40px 40px;
+    @include positionning(flex, start, center);
+    h1 {
+      @include font('Quicksand', normal, 600, 40px, 50px, $main-color);
+      white-space: nowrap;
+      padding-right: 49px;
+    };  
+    nav {
+      width: 100%;
+      @include positionning(flex, space-between, center);
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          padding: 12px 0 12px 24px;
+          span {
+            @include font('Quicksand', normal, 400, 24px, 30px, white); 
+          };
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  main {
+    h2 {
+      text-align: center;
+      @include font('Quicksand', normal, 700, 64px, 80px, white);
+      text-shadow: 0px 4px 0px #000000;
+      span {
+        color: $main-color;
+      }
+    }
+    p {
+      text-align: center;
+      @include font('Quicksand', normal, 700, 32px, 40px, $main-color);
+      padding-top: 8px;
+    }
+    form {
+      background: rgba(57, 57, 57, 0.5);
+      backdrop-filter: blur(25px);
+      width: 686px;
+      border-radius: 16px;
+      margin: auto;
+      margin-top: 100px;
+      .input, button {
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .pet-selection {
+        @include positionning(flex, center, center);
+        gap: 16px;
+        padding-top: 26px;
+        button {
+          border-radius: 16px;
+          padding: 14px 62px;
+          border: 2px solid #FFFFFF;
+          background-color: rgba(255,255,255,0.1);
+          @include font('Quicksand', normal, 600, 24px, 30px, white);
+        }
+        .active {
+          background: $main-color;
+        }
+      }
+      .options {
+        @include positionning(flex, center, center);
+        padding-top: 41px;
+        span {
+          @include font('Quicksand', normal, 400, 16px, 20px, white);
+        }
+        img {
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      .activity-selection {
+        @include positionning(flex, center, center);
+        padding-top: 16px;
+        .input {
+          @include positionning(flex, space-between, center);
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 8px;
+          width: 261px;
+          padding: 11px 8px;
+          div {
+            @include positionning(flex, center, center);
+            span {
+              @include font('Quicksand', normal, 400, 16px, 20px, white);
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+      .additionnal-infos {
+        @include positionning(flex, center, center);
+        gap: 8px;
+        padding-top: 16px;
+        .input {
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 8px;
+          width: 170px;
+          padding: 16px;
+        }
+        .placeholder {
+          @include font('Quicksand', normal, 400, 12px, 15px, rgba(255,255,255,0.45));
+        }
+        .date {
+          @include positionning(flex, space-between, center);
+          .date-selection {
+            @include positionning(flex, center, center);
+            @include font('Quicksand', normal, 500, 8px, 10px, white);
+            gap: 6px;
+          }
+        }
+      }
+      .pet-size {
+        @include positionning(flex, center, center);
+        padding-top: 16px;
+        .input{
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 8px;
+          width: 49px;
+          padding: 15px 23px 15px 16px;
+          .placeholder {
+            @include positionning(flex, center, center);
+            gap: 8px;
+            @include font('Quicksand', normal, 400, 12px, 15px, rgba(255,255,255,0.45));
+          }
+        }
+      }
+      .submit {
+        @include positionning(flex, center, center);
+        padding: 16px 0 45px 0;
+        button {
+          background: $main-color;
+          border-radius: 8px;
+          padding: 8px 59px;
+          @include font('Quicksand', normal, 600, 24px, 30px, white);
+        }
+      }
+    }
+  }
+  .background-img {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 1440px;;
+    height: 100vh;
+    .dog {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55)),
+        url("./assets/images/dog.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 50%;
+    }
+    .cat {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55)),
+        url("./assets/images/cat.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 50%;
+    }
+  }
+}

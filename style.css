@@ -1,0 +1,386 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: brown;
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+}
+
+body header {
+  width: calc(100% - 120px);
+  padding: 40px 80px 40px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header h1 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffa500;
+  white-space: nowrap;
+  padding-right: 49px;
+}
+
+body header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav ul {
+  list-style: none;
+}
+
+body header nav ul li {
+  display: inline-block;
+  padding: 12px 0 12px 24px;
+}
+
+body header nav ul li span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: white;
+}
+
+body header nav ul li:hover {
+  cursor: pointer;
+}
+
+body main h2 {
+  text-align: center;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 80px;
+  color: white;
+  text-shadow: 0px 4px 0px #000000;
+}
+
+body main h2 span {
+  color: #ffa500;
+}
+
+body main p {
+  text-align: center;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #ffa500;
+  padding-top: 8px;
+}
+
+body main form {
+  background: rgba(57, 57, 57, 0.5);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  width: 686px;
+  border-radius: 16px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+body main form .input:hover, body main form button:hover {
+  cursor: pointer;
+}
+
+body main form .pet-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding-top: 26px;
+}
+
+body main form .pet-selection button {
+  border-radius: 16px;
+  padding: 14px 62px;
+  border: 2px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: white;
+}
+
+body main form .pet-selection .active {
+  background: #ffa500;
+}
+
+body main form .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 41px;
+}
+
+body main form .options span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+body main form .options img:hover {
+  cursor: pointer;
+}
+
+body main form .activity-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 16px;
+}
+
+body main form .activity-selection .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 261px;
+  padding: 11px 8px;
+}
+
+body main form .activity-selection .input div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main form .activity-selection .input div span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  padding-left: 8px;
+}
+
+body main form .additionnal-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+body main form .additionnal-infos .input {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 170px;
+  padding: 16px;
+}
+
+body main form .additionnal-infos .placeholder {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+body main form .additionnal-infos .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main form .additionnal-infos .date .date-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 10px;
+  color: white;
+  gap: 6px;
+}
+
+body main form .pet-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 16px;
+}
+
+body main form .pet-size .input {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 49px;
+  padding: 15px 23px 15px 16px;
+}
+
+body main form .pet-size .input .placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+body main form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 0 45px 0;
+}
+
+body main form .submit button {
+  background: #ffa500;
+  border-radius: 8px;
+  padding: 8px 59px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: white;
+}
+
+body .background-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+}
+
+body .background-img .dog {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.95)), to(rgba(0, 0, 0, 0.55))), url("./assets/images/dog.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55)), url("./assets/images/dog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 50%;
+}
+
+body .background-img .cat {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.95)), to(rgba(0, 0, 0, 0.55))), url("./assets/images/cat.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55)), url("./assets/images/cat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */
